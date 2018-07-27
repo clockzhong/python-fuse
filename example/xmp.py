@@ -268,8 +268,9 @@ Userspace nullfs-alike: mirror the filesystem tree from some point on.
         if server.fuse_args.mount_expected():
             os.chdir(server.root)
     except OSError:
-        print("can't enter root of underlying filesystem", file=sys.stderr)
-        sys.exit(1)
+        #print("can't enter root of underlying filesystem", file=sys.stderr)
+        print("OS Error")
+	sys.exit(1)
 
     server.main()
 
